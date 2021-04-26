@@ -85,6 +85,7 @@ namespace Фигуры_КРАСНОВ
             // 
             // btnok
             // 
+            this.btnok.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnok.Location = new System.Drawing.Point(355, 87);
             this.btnok.Name = "btnok";
             this.btnok.Size = new System.Drawing.Size(75, 63);
@@ -95,6 +96,7 @@ namespace Фигуры_КРАСНОВ
             // 
             // btncansel
             // 
+            this.btncansel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btncansel.Location = new System.Drawing.Point(355, 202);
             this.btncansel.Name = "btncansel";
             this.btncansel.Size = new System.Drawing.Size(75, 68);

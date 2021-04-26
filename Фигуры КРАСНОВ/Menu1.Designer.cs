@@ -32,6 +32,8 @@ namespace Фигуры_КРАСНОВ
             this.btnSD = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,11 +50,13 @@ namespace Фигуры_КРАСНОВ
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Location = new System.Drawing.Point(0, 130);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1033, 395);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // panel2
             // 
@@ -62,6 +66,16 @@ namespace Фигуры_КРАСНОВ
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1033, 131);
             this.panel2.TabIndex = 2;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(946, 7);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 1;
+            this.btnClear.Text = "Очистить";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Menu1
             // 
@@ -73,6 +87,7 @@ namespace Фигуры_КРАСНОВ
             this.Name = "Menu1";
             this.Text = "Рисование";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -83,6 +98,7 @@ namespace Фигуры_КРАСНОВ
         private System.Windows.Forms.Button btnSD;
         private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

@@ -30,15 +30,26 @@ namespace Фигуры_КРАСНОВ
             menu2.Show();
             if (menu2.IsDisposed)
             {
-                Graphics g = panel1.CreateGraphics();
-                Pen pen = new Pen(System.Drawing.ColorTranslator.FromHtml(color));
-                g.DrawEllipse(pen, 5, 5, 10, 10);
+                
             }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Graphics g = panel1.CreateGraphics();
+            Pen pen = new Pen(Color.Black, 3);
+            g.DrawEllipse(pen, e.X, e.Y, 100, 100);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Graphics g = panel1.CreateGraphics();
+            g.Clear(Color.Gray);
         }
     }
 }

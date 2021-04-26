@@ -40,8 +40,22 @@ namespace Фигуры_КРАСНОВ
                 Pen pen = new Pen(System.Drawing.ColorTranslator.FromHtml(form1.color));
                 g.DrawEllipse(pen, 10, 10, 20, 20);
             }
-            Close();
-            Dispose();
+            if (form1.color != null)
+            {
+                Graphics f = form1.panel1.CreateGraphics();
+                Pen pen = new Pen(System.Drawing.ColorTranslator.FromHtml(form1.color));
+                f.DrawLine(pen, 75, 100, 100, 75);
+                Close();
+                Dispose();
+            }
+            if (form1.color != null)
+            {
+                Graphics h = form1.panel1.CreateGraphics();
+                Pen pen = new Pen(System.Drawing.ColorTranslator.FromHtml(form1.color));
+                h.DrawRectangle(pen, 75, 100, 100, 75);
+                Close();
+                Dispose();
+            }
         }
 
         private void Menu2_Load(object sender, EventArgs e)
