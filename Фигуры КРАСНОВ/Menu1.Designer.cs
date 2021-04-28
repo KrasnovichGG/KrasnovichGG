@@ -33,10 +33,14 @@ namespace Фигуры_КРАСНОВ
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbcolor1 = new System.Windows.Forms.ComboBox();
             this.cmbboxf = new System.Windows.Forms.ComboBox();
+            this.cmbcolor1 = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSD
@@ -72,6 +76,8 @@ namespace Фигуры_КРАСНОВ
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.trackBar1);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.cmbboxf);
             this.panel2.Controls.Add(this.cmbcolor1);
             this.panel2.Controls.Add(this.btnSD);
@@ -82,22 +88,6 @@ namespace Фигуры_КРАСНОВ
             this.panel2.Size = new System.Drawing.Size(1033, 131);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // cmbcolor1
-            // 
-            this.cmbcolor1.FormattingEnabled = true;
-            this.cmbcolor1.Items.AddRange(new object[] {
-            "Green",
-            "Red",
-            "Orange",
-            "Blue",
-            "Purple",
-            "Yellow"});
-            this.cmbcolor1.Location = new System.Drawing.Point(622, 56);
-            this.cmbcolor1.Name = "cmbcolor1";
-            this.cmbcolor1.Size = new System.Drawing.Size(121, 21);
-            this.cmbcolor1.TabIndex = 1;
-            this.cmbcolor1.SelectedIndexChanged += new System.EventHandler(this.cmbcolor1_SelectedIndexChanged);
             // 
             // cmbboxf
             // 
@@ -113,6 +103,40 @@ namespace Фигуры_КРАСНОВ
             this.cmbboxf.TabIndex = 2;
             this.cmbboxf.SelectedIndexChanged += new System.EventHandler(this.cmbboxf_SelectedIndexChanged);
             // 
+            // cmbcolor1
+            // 
+            this.cmbcolor1.FormattingEnabled = true;
+            this.cmbcolor1.Items.AddRange(new object[] {
+            "Green",
+            "Red",
+            "Orange",
+            "Blue",
+            "Purple",
+            "Yellow",
+            "Выбрать цвет"});
+            this.cmbcolor1.Location = new System.Drawing.Point(622, 56);
+            this.cmbcolor1.Name = "cmbcolor1";
+            this.cmbcolor1.Size = new System.Drawing.Size(121, 21);
+            this.cmbcolor1.TabIndex = 1;
+            this.cmbcolor1.SelectedIndexChanged += new System.EventHandler(this.cmbcolor1_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(595, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 21);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(892, 48);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 4;
+            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,6 +149,8 @@ namespace Фигуры_КРАСНОВ
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,6 +163,9 @@ namespace Фигуры_КРАСНОВ
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cmbboxf;
         private System.Windows.Forms.ComboBox cmbcolor1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 

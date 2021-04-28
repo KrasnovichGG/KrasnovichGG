@@ -27,11 +27,24 @@ namespace Фигуры_КРАСНОВ
 
         private void btnSD_Click(object sender, EventArgs e)
         {
-            if (cmbcolor1.SelectedIndex <= -1 || cmbboxf.SelectedIndex <= -1)
-                return;
-
-            color = cmbcolor1.SelectedItem.ToString();
             figurename = cmbboxf.SelectedItem.ToString();
+            //if (cmbcolor1.SelectedItem.ToString() != "Выбрать цвет")
+            //{
+            //    if (cmbcolor1.SelectedIndex <= -1 || cmbboxf.SelectedIndex <= -1)
+            //        return;
+
+            //    color = cmbcolor1.SelectedItem.ToString();
+                
+            //}
+            //else
+            //{
+            //    button1.BackColor = colorDialog1.Color;
+            //}
+
+
+
+
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -46,7 +59,7 @@ namespace Фигуры_КРАСНОВ
             switch (figurename)
             {
                 case "Круг":
-                    pen = new Pen(ColorTranslator.FromHtml(color));
+                   pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
                    g.DrawEllipse(pen, e.X, e.Y, 100, 100);
                    break;
                 case "Треугольник":
@@ -60,15 +73,15 @@ namespace Фигуры_КРАСНОВ
 
                     pnt[2].X = 50;
                     pnt[2].Y = 120;
-                    pen = new Pen(ColorTranslator.FromHtml(color));
+                    pen = new Pen(button1.BackColor,trackBar1.Value);//ColorTranslator.FromHtml(color)a
                     g.DrawPolygon(pen,pnt);
                     break;
                 case "Прямоугольник":
-                    pen = new Pen(ColorTranslator.FromHtml(color));
-                    g.DrawRectangle(pen, e.X, e.Y, 100, 100);
+                    pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
+                    g.DrawRectangle(pen, e.X, e.Y, 175, 100);
                     break;
                 case "Линия":
-                    pen = new Pen(ColorTranslator.FromHtml(color));
+                    pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
                     g.DrawLine(pen, e.X, e.Y, 100, 100);
                     break;
             }
@@ -93,6 +106,12 @@ namespace Фигуры_КРАСНОВ
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+                button1.BackColor = colorDialog1.Color;
         }
     }
 }
