@@ -33,11 +33,12 @@ namespace Фигуры_КРАСНОВ
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cmbboxf = new System.Windows.Forms.ComboBox();
-            this.cmbcolor1 = new System.Windows.Forms.ComboBox();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cmbboxf = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -76,10 +77,10 @@ namespace Фигуры_КРАСНОВ
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnsave);
             this.panel2.Controls.Add(this.trackBar1);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.cmbboxf);
-            this.panel2.Controls.Add(this.cmbcolor1);
             this.panel2.Controls.Add(this.btnSD);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -89,6 +90,23 @@ namespace Фигуры_КРАСНОВ
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(892, 48);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(604, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(21, 21);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cmbboxf
             // 
             this.cmbboxf.FormattingEnabled = true;
@@ -97,45 +115,21 @@ namespace Фигуры_КРАСНОВ
             "Круг",
             "Прямоугольник",
             "Линия"});
-            this.cmbboxf.Location = new System.Drawing.Point(749, 56);
+            this.cmbboxf.Location = new System.Drawing.Point(645, 57);
             this.cmbboxf.Name = "cmbboxf";
             this.cmbboxf.Size = new System.Drawing.Size(121, 21);
             this.cmbboxf.TabIndex = 2;
             this.cmbboxf.SelectedIndexChanged += new System.EventHandler(this.cmbboxf_SelectedIndexChanged);
             // 
-            // cmbcolor1
+            // btnsave
             // 
-            this.cmbcolor1.FormattingEnabled = true;
-            this.cmbcolor1.Items.AddRange(new object[] {
-            "Green",
-            "Red",
-            "Orange",
-            "Blue",
-            "Purple",
-            "Yellow",
-            "Выбрать цвет"});
-            this.cmbcolor1.Location = new System.Drawing.Point(622, 56);
-            this.cmbcolor1.Name = "cmbcolor1";
-            this.cmbcolor1.Size = new System.Drawing.Size(121, 21);
-            this.cmbcolor1.TabIndex = 1;
-            this.cmbcolor1.SelectedIndexChanged += new System.EventHandler(this.cmbcolor1_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(595, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(21, 21);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(892, 48);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 4;
+            this.btnsave.Location = new System.Drawing.Point(131, 57);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(155, 23);
+            this.btnsave.TabIndex = 5;
+            this.btnsave.Text = "Сохранить";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.button2_Click);
             // 
             // Menu1
             // 
@@ -162,10 +156,11 @@ namespace Фигуры_КРАСНОВ
         public System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cmbboxf;
-        private System.Windows.Forms.ComboBox cmbcolor1;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 

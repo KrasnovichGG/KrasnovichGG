@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,10 +52,10 @@ namespace Фигуры_КРАСНОВ
         {
 
         }
-
+        Graphics g;
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-            Graphics g = panel1.CreateGraphics();
+             g = panel1.CreateGraphics();
             Pen pen;
             switch (figurename)
             {
@@ -112,6 +113,16 @@ namespace Фигуры_КРАСНОВ
         {
             colorDialog1.ShowDialog();
                 button1.BackColor = colorDialog1.Color;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialog1.ShowDialog()== DialogResult.OK)
+            {
+                Bitmap bm = new Bitmap(panel1.Width, panel1.Height, g);
+                panel1.DrawToBitmap(bm, new Rectangle(0, 0, panel1.Width, panel1.Height));
+                bm.Save(saveFileDialog1.FileName,ImageFormat.Jpeg);
+            }
         }
     }
 }
