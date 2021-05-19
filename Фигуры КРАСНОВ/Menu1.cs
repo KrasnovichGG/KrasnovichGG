@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,11 @@ namespace Фигуры_КРАСНОВ
 
     public partial class Menu1 : Form
     {
-        public string color;
+        List<Shape> shapes = new List<Shape>();
+        public Color color;
         public string figurename;
+        Graphics g;
+
         public Menu1()
         {
             InitializeComponent();
@@ -24,105 +28,115 @@ namespace Фигуры_КРАСНОВ
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            g = panel1.CreateGraphics();
+            color = button1.BackColor;
+            cmbboxf.SelectedIndex = 0;
         }
 
         private void btnSD_Click(object sender, EventArgs e)
         {
             figurename = cmbboxf.SelectedItem.ToString();
-            //if (cmbcolor1.SelectedItem.ToString() != "Выбрать цвет")
-            //{
-            //    if (cmbcolor1.SelectedIndex <= -1 || cmbboxf.SelectedIndex <= -1)
-            //        return;
-
-            //    color = cmbcolor1.SelectedItem.ToString();
-                
-            //}
-            //else
-            //{
-            //    button1.BackColor = colorDialog1.Color;
-            //}
-
-
-
-
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+            Drawing(e.Graphics);
+
         }
-        Graphics g;
+
         private void panel1_MouseClick(object sender, MouseEventArgs e)
         {
-             g = panel1.CreateGraphics();
+            Shape newShape = new Shape();
+            newShape.ShapeName = figurename;
+
+            newShape.PenColor = color;
+
+            newShape.Size = Convert.ToInt32(50);
+            newShape.PenWith = trackBar1.Value;
+            newShape.X1 = Convert.ToInt32(e.X);
+            newShape.Y1 = Convert.ToInt32(e.Y);
+
+            shapes.Add(newShape);
+            panel1.Invalidate();
+        }
+
+        private void Drawing(Graphics g)
+        {
             Pen pen;
-            switch (figurename)
+            foreach (var sh in shapes)
             {
-                case "Круг":
-                   pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
-                   g.DrawEllipse(pen, e.X, e.Y, 100, 100);
-                   break;
-                case "Треугольник":
-                    Point[] pnt = new Point[3];
+                pen = new Pen(sh.PenColor, sh.PenWith);
+                switch (sh.ShapeName)
+                {
+                    case "Круг":
+                        g.DrawEllipse(pen, sh.X1, sh.Y1, 100, 100);
+                        break;
+                    case "Треугольник":
+                        Point[] pnt = new Point[3];
 
-                    pnt[0].X = e.X;
-                    pnt[0].Y = e.Y;
+                        pnt[0].X = sh.X1;
+                        pnt[0].Y = sh.Y1;
 
-                    pnt[1].X = 150;
-                    pnt[1].Y = 200;
+                        pnt[1].X = sh.X1 + 50;
+                        pnt[1].Y = sh.Y1 + 200;
 
-                    pnt[2].X = 50;
-                    pnt[2].Y = 120;
-                    pen = new Pen(button1.BackColor,trackBar1.Value);//ColorTranslator.FromHtml(color)a
-                    g.DrawPolygon(pen,pnt);
-                    break;
-                case "Прямоугольник":
-                    pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
-                    g.DrawRectangle(pen, e.X, e.Y, 175, 100);
-                    break;
-                case "Линия":
-                    pen = new Pen(button1.BackColor, trackBar1.Value);//ColorTranslator.FromHtml(color)
-                    g.DrawLine(pen, e.X, e.Y, 100, 100);
-                    break;
+                        pnt[2].X = sh.X1 + 120;
+                        pnt[2].Y = sh.Y1 + 120;
+                        g.DrawPolygon(pen, pnt);
+                        break;
+                    case "Прямоугольник":
+                        g.DrawRectangle(pen, sh.X1, sh.Y1, 175, 100);
+                        break;
+                    case "Линия":
+                        g.DrawLine(pen, sh.X1, sh.Y1, sh.X1 + 100, sh.Y1 + 100);
+                        break;
+                }
             }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            Graphics g = panel1.CreateGraphics();
             g.Clear(this.BackColor);
-        }
-
-        private void cmbcolor1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbboxf_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            panel1.BackgroundImage = null;
+            shapes.Clear();
+            panel1.Invalidate();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             colorDialog1.ShowDialog();
-                button1.BackColor = colorDialog1.Color;
+            button1.BackColor = colorDialog1.Color;
+            color = button1.BackColor;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(saveFileDialog1.ShowDialog()== DialogResult.OK)
-            {
-                Bitmap bm = new Bitmap(panel1.Width, panel1.Height, g);
-                panel1.DrawToBitmap(bm, new Rectangle(0, 0, panel1.Width, panel1.Height));
-                bm.Save(saveFileDialog1.FileName,ImageFormat.Jpeg);
-            }
+            Rectangle rect = new Rectangle(Point.Empty, panel1.Size);
+            Bitmap bitmap = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
+            panel1.DrawToBitmap(bitmap, rect);
+            bitmap.Save("p1.jpeg", ImageFormat.Jpeg);
+
         }
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                panel1.BackgroundImage = Image.FromFile(openFileDialog.FileName);
+            }
+            openFileDialog.Dispose();
+        }
+    }
+
+    class Shape
+    {
+        public string ShapeName { get; set; }
+        public Color PenColor { get; set; }
+        public int Size { get; set; }
+        public int PenWith { set; get; }
+        public int X1 { get; set; }
+        public int Y1 { get; set; }
     }
 }
