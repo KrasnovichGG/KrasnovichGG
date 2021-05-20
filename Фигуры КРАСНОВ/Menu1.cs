@@ -31,6 +31,10 @@ namespace Фигуры_КРАСНОВ
             g = panel1.CreateGraphics();
             color = button1.BackColor;
             cmbboxf.SelectedIndex = 0;
+            ToolTip t = new ToolTip();
+            t.SetToolTip(btnSD, "Когда выберите цвет и фигуру,нажимайте на меня!!! ");
+            t.SetToolTip(btnsave, "Сохраните свое творение в папке @Debug@");
+            t.SetToolTip(panel1, "Когда выбрали всё что нужно,кликайте мышкой!");
         }
 
         private void btnSD_Click(object sender, EventArgs e)
@@ -127,6 +131,26 @@ namespace Фигуры_КРАСНОВ
                 panel1.BackgroundImage = Image.FromFile(openFileDialog.FileName);
             }
             openFileDialog.Dispose();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 
