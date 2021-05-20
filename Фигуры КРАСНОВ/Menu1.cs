@@ -28,13 +28,13 @@ namespace Фигуры_КРАСНОВ
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            g = panel1.CreateGraphics();
-            color = button1.BackColor;
+            g = paper.CreateGraphics();
+            color = btncolor.BackColor;
             cmbboxf.SelectedIndex = 0;
             ToolTip t = new ToolTip();
             t.SetToolTip(btnSD, "Когда выберите цвет и фигуру,нажимайте на меня!!! ");
             t.SetToolTip(btnsave, "Сохраните свое творение в папке @Debug@");
-            t.SetToolTip(panel1, "Когда выбрали всё что нужно,кликайте мышкой!");
+            t.SetToolTip(paper, "Когда выбрали всё что нужно,кликайте мышкой!");
         }
 
         private void btnSD_Click(object sender, EventArgs e)
@@ -57,12 +57,12 @@ namespace Фигуры_КРАСНОВ
             newShape.PenColor = color;
 
             newShape.Size = Convert.ToInt32(50);
-            newShape.PenWith = trackBar1.Value;
+            newShape.PenWith = Figuresize.Value;
             newShape.X1 = Convert.ToInt32(e.X);
             newShape.Y1 = Convert.ToInt32(e.Y);
 
             shapes.Add(newShape);
-            panel1.Invalidate();
+            paper.Invalidate();
         }
 
         private void Drawing(Graphics g)
@@ -103,23 +103,23 @@ namespace Фигуры_КРАСНОВ
         private void btnClear_Click(object sender, EventArgs e)
         {
             g.Clear(this.BackColor);
-            panel1.BackgroundImage = null;
+            paper.BackgroundImage = null;
             shapes.Clear();
-            panel1.Invalidate();
+            paper.Invalidate();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             colorDialog1.ShowDialog();
-            button1.BackColor = colorDialog1.Color;
-            color = button1.BackColor;
+            btncolor.BackColor = colorDialog1.Color;
+            color = btncolor.BackColor;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Rectangle rect = new Rectangle(Point.Empty, panel1.Size);
+            Rectangle rect = new Rectangle(Point.Empty, paper.Size);
             Bitmap bitmap = new Bitmap(rect.Width, rect.Height, PixelFormat.Format32bppArgb);
-            panel1.DrawToBitmap(bitmap, rect);
+            paper.DrawToBitmap(bitmap, rect);
             bitmap.Save("p1.jpeg", ImageFormat.Jpeg);
 
         }
@@ -128,7 +128,7 @@ namespace Фигуры_КРАСНОВ
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                panel1.BackgroundImage = Image.FromFile(openFileDialog.FileName);
+                paper.BackgroundImage = Image.FromFile(openFileDialog.FileName);
             }
             openFileDialog.Dispose();
         }

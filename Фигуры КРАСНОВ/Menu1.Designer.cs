@@ -30,39 +30,39 @@ namespace Фигуры_КРАСНОВ
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.paper = new System.Windows.Forms.Panel();
             this.btnClear = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.load_ph = new System.Windows.Forms.Button();
+            this.Panelmenu = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnsave = new System.Windows.Forms.Button();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Figuresize = new System.Windows.Forms.TrackBar();
+            this.btncolor = new System.Windows.Forms.Button();
             this.cmbboxf = new System.Windows.Forms.ComboBox();
             this.btnSD = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            this.paper.SuspendLayout();
+            this.Panelmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Figuresize)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // paper
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.paper.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Location = new System.Drawing.Point(0, 130);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1379, 395);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
+            this.paper.Controls.Add(this.btnClear);
+            this.paper.Location = new System.Drawing.Point(0, 130);
+            this.paper.Name = "paper";
+            this.paper.Size = new System.Drawing.Size(1379, 395);
+            this.paper.TabIndex = 1;
+            this.paper.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.paper.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
             // 
             // btnClear
             // 
@@ -76,38 +76,38 @@ namespace Фигуры_КРАСНОВ
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button2
+            // load_ph
             // 
-            this.button2.BackColor = System.Drawing.Color.Bisque;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(1244, 23);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 70);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Загрузить фото";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            this.load_ph.BackColor = System.Drawing.Color.Bisque;
+            this.load_ph.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.load_ph.Location = new System.Drawing.Point(1244, 23);
+            this.load_ph.Name = "load_ph";
+            this.load_ph.Size = new System.Drawing.Size(99, 70);
+            this.load_ph.TabIndex = 2;
+            this.load_ph.Text = "Загрузить фото";
+            this.load_ph.UseVisualStyleBackColor = false;
+            this.load_ph.Click += new System.EventHandler(this.button2_Click_2);
             // 
-            // panel2
+            // Panelmenu
             // 
-            this.panel2.BackColor = System.Drawing.Color.Coral;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnsave);
-            this.panel2.Controls.Add(this.trackBar1);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.cmbboxf);
-            this.panel2.Controls.Add(this.btnSD);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1379, 131);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.Panelmenu.BackColor = System.Drawing.Color.Coral;
+            this.Panelmenu.Controls.Add(this.load_ph);
+            this.Panelmenu.Controls.Add(this.label4);
+            this.Panelmenu.Controls.Add(this.label3);
+            this.Panelmenu.Controls.Add(this.label2);
+            this.Panelmenu.Controls.Add(this.label1);
+            this.Panelmenu.Controls.Add(this.btnsave);
+            this.Panelmenu.Controls.Add(this.Figuresize);
+            this.Panelmenu.Controls.Add(this.btncolor);
+            this.Panelmenu.Controls.Add(this.cmbboxf);
+            this.Panelmenu.Controls.Add(this.btnSD);
+            this.Panelmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panelmenu.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Panelmenu.Location = new System.Drawing.Point(0, 0);
+            this.Panelmenu.Name = "Panelmenu";
+            this.Panelmenu.Size = new System.Drawing.Size(1379, 131);
+            this.Panelmenu.TabIndex = 2;
+            this.Panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label4
             // 
@@ -159,24 +159,24 @@ namespace Фигуры_КРАСНОВ
             this.btnsave.UseVisualStyleBackColor = false;
             this.btnsave.Click += new System.EventHandler(this.button2_Click);
             // 
-            // trackBar1
+            // Figuresize
             // 
-            this.trackBar1.Location = new System.Drawing.Point(1033, 48);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(188, 45);
-            this.trackBar1.TabIndex = 4;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.Figuresize.Location = new System.Drawing.Point(1033, 48);
+            this.Figuresize.Name = "Figuresize";
+            this.Figuresize.Size = new System.Drawing.Size(188, 45);
+            this.Figuresize.TabIndex = 4;
+            this.Figuresize.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
-            // button1
+            // btncolor
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(709, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 45);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncolor.BackColor = System.Drawing.Color.White;
+            this.btncolor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncolor.Location = new System.Drawing.Point(709, 48);
+            this.btncolor.Name = "btncolor";
+            this.btncolor.Size = new System.Drawing.Size(56, 45);
+            this.btncolor.TabIndex = 3;
+            this.btncolor.UseVisualStyleBackColor = false;
+            this.btncolor.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbboxf
             // 
@@ -213,15 +213,15 @@ namespace Фигуры_КРАСНОВ
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1379, 525);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Panelmenu);
+            this.Controls.Add(this.paper);
             this.Name = "Menu1";
             this.Text = "Рисование";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            this.paper.ResumeLayout(false);
+            this.Panelmenu.ResumeLayout(false);
+            this.Panelmenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Figuresize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,16 +229,16 @@ namespace Фигуры_КРАСНОВ
         #endregion
 
         private System.Windows.Forms.Button btnSD;
-        private System.Windows.Forms.Panel panel2;
-        public System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Panelmenu;
+        public System.Windows.Forms.Panel paper;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ComboBox cmbboxf;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Button btncolor;
+        private System.Windows.Forms.TrackBar Figuresize;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button load_ph;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
