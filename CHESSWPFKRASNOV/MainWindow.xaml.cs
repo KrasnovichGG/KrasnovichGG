@@ -24,5 +24,10 @@ namespace CHESSWPFKRASNOV
         {
             InitializeComponent();
         }
+
+        private void x4y4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

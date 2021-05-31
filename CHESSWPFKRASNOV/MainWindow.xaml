@@ -184,7 +184,7 @@
                 </Button>
                 <Button x:Name="x4y4"
                         Grid.Column="3" Grid.Row="4"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="x4y4_Click">
                     <Image x:Name="Ix4y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y5"
