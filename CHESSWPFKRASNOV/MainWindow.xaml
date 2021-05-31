@@ -49,325 +49,333 @@
                 </Grid.RowDefinitions>
                 <Button x:Name="x1y1"
                         Grid.Column="0" Grid.Row="7"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix1y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y2"
                         Grid.Column="0" Grid.Row="6"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix1y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y3"
                         Grid.Column="0" Grid.Row="5"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix1y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y4"
                         Grid.Column="0" Grid.Row="4"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix1y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y5"
                         Grid.Column="0" Grid.Row="3"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix1y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y6"
                         Grid.Column="0" Grid.Row="2"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix1y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y7"
                         Grid.Column="0" Grid.Row="1"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix1y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x1y8"
                         Grid.Column="0" Grid.Row="0"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix1y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y1"
                         Grid.Column="1" Grid.Row="7"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix2y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y2"
                         Grid.Column="1" Grid.Row="6"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix2y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y3"
                         Grid.Column="1" Grid.Row="5"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix2y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y4"
                         Grid.Column="1" Grid.Row="4"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix2y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y5"
                         Grid.Column="1" Grid.Row="3"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix2y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y6"
                         Grid.Column="1" Grid.Row="2"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix2y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y7"
-                        Grid.Column="1" Grid.Row="1"
-                        Background="#E8EBEF">
+                        Grid.Column="1" Grid.Row="1" Click="Move_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/Ладья.png"/>
+                    </Button.Background>
                     <Image x:Name="Ix2y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x2y8"
                         Grid.Column="1" Grid.Row="0"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix2y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y1"
                         Grid.Column="2" Grid.Row="7"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix3y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y2"
                         Grid.Column="2" Grid.Row="6"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix3y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y3"
                         Grid.Column="2" Grid.Row="5"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix3y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y4"
                         Grid.Column="2" Grid.Row="4"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix3y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y5"
                         Grid.Column="2" Grid.Row="3"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix3y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y6"
                         Grid.Column="2" Grid.Row="2"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix3y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y7"
                         Grid.Column="2" Grid.Row="1"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix3y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x3y8"
                         Grid.Column="2" Grid.Row="0"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix3y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y1"
                         Grid.Column="3" Grid.Row="7"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix4y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y2"
                         Grid.Column="3" Grid.Row="6"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix4y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y3"
                         Grid.Column="3" Grid.Row="5"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix4y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y4"
-                        Grid.Column="3" Grid.Row="4"
-                        Background="#7d8796" Click="x4y4_Click">
+                        Grid.Column="3" Grid.Row="4" MouseDown="Move_MouseDown" Click="Move_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/Королева.png"/>
+                    </Button.Background>
                     <Image x:Name="Ix4y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y5"
                         Grid.Column="3" Grid.Row="3"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix4y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y6"
                         Grid.Column="3" Grid.Row="2"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix4y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y7"
                         Grid.Column="3" Grid.Row="1"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix4y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x4y8"
                         Grid.Column="3" Grid.Row="0"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix4y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y1"
                         Grid.Column="4" Grid.Row="7"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix5y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y2"
                         Grid.Column="4" Grid.Row="6"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix5y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y3"
                         Grid.Column="4" Grid.Row="5"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix5y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y4"
                         Grid.Column="4" Grid.Row="4"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix5y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y5"
                         Grid.Column="4" Grid.Row="3"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix5y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y6"
                         Grid.Column="4" Grid.Row="2"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix5y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y7"
                         Grid.Column="4" Grid.Row="1"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix5y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x5y8"
                         Grid.Column="4" Grid.Row="0"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix5y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y1"
                         Grid.Column="5" Grid.Row="7"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix6y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y2"
                         Grid.Column="5" Grid.Row="6"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix6y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y3"
                         Grid.Column="5" Grid.Row="5"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix6y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y4"
                         Grid.Column="5" Grid.Row="4"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix6y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y5"
-                        Grid.Column="5" Grid.Row="3"
-                        Background="#E8EBEF">
+                        Grid.Column="5" Grid.Row="3" Click="Move_Click">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Resources/Конь.png"/>
+                    </Button.Background>
                     <Image x:Name="Ix6y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y6"
                         Grid.Column="5" Grid.Row="2"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix6y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y7"
                         Grid.Column="5" Grid.Row="1"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix6y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x6y8"
                         Grid.Column="5" Grid.Row="0"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix6y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y1"
-                        Grid.Column="6" Grid.Row="7"
-                        Background="#7d8796">
+                        Grid.Column="6" Grid.Row="7" Click="Move_Click" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="/Resources/Слон.jpg"/>
+                    </Button.Background>
                     <Image x:Name="Ix7y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y2"
                         Grid.Column="6" Grid.Row="6"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" MouseDown="Move_MouseDown" Click="Move_Click">
                     <Image x:Name="Ix7y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y3"
                         Grid.Column="6" Grid.Row="5"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix7y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y4"
                         Grid.Column="6" Grid.Row="4"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix7y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y5"
                         Grid.Column="6" Grid.Row="3"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix7y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y6"
                         Grid.Column="6" Grid.Row="2"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix7y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y7"
                         Grid.Column="6" Grid.Row="1"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix7y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x7y8"
                         Grid.Column="6" Grid.Row="0"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix7y8" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y1"
                         Grid.Column="7" Grid.Row="7"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix8y1" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y2"
                         Grid.Column="7" Grid.Row="6"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix8y2" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y3"
                         Grid.Column="7" Grid.Row="5"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix8y3" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y4"
                         Grid.Column="7" Grid.Row="4"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix8y4" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y5"
                         Grid.Column="7" Grid.Row="3"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix8y5" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y6"
                         Grid.Column="7" Grid.Row="2"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix8y6" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y7"
                         Grid.Column="7" Grid.Row="1"
-                        Background="#E8EBEF">
+                        Background="#E8EBEF" Click="Move_Click">
                     <Image x:Name="Ix8y7" Source="{x:Null}"/>
                 </Button>
                 <Button x:Name="x8y8"
                         Grid.Column="7" Grid.Row="0"
-                        Background="#7d8796">
+                        Background="#7d8796" Click="Move_Click">
                     <Image x:Name="Ix8y8" Source="{x:Null}"/>
                 </Button>
-                
+
             </Grid>
         </Grid>
     </Grid>
